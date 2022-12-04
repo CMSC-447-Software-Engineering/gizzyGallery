@@ -1,0 +1,72 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Bebas Neue', cursive;
+
+    background-color: grey;
+    padding: 0;
+    margin: 0;
+}
+.signUp{
+    width: 376px;
+    height: 270px;
+    background-color: #f7e8ff;
+    border-radius: 1rem;
+    text-align: center;
+
+    padding: 10px;
+}
+.container{
+    width: 396px;
+    height: 360px;
+    align-items: center;
+    justify-content: center;
+    background-color: #e0affa;
+    border-radius: 1rem;
+    text-align: center;
+}
+.usernameContainer{
+    padding:10px;
+    border-radius: 2rem;
+    text-align: center;
+}
+.passwordContainer{
+    border-radius: 2rem;
+    text-align: center;
+    vertical-align: middle;
+
+}
+.passwordConfirmContainer{
+    padding:10px;
+    border-radius: 2rem;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.sign{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+.signUpButton{
+    -webkit-text-fill-color: #f7e8ff;
+    background-color: #5a0b85;
+    width: 200px;
+    border-radius: 1rem;
+    padding: 10px;
+}
+
+.loginButton{
+    -webkit-text-fill-color: #f7e8ff;
+    justify-content: center;
+    background-color:  #5a0b85;
+    border-radius: 1rem;
+    text-align: center;
+    align-items: center;
+    margin-top: 10px;
+    padding: 10px;
+}
