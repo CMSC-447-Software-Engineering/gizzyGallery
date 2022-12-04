@@ -1,0 +1,2 @@
+Dependencies:
+	exif-js (install with `npm i exif-js`)
