@@ -35,32 +35,27 @@ export default function Home(){
         }catch (e){
             console.log(e);
         }
-
-
     }
     return (
-        
+    
     <div className = "container" >
-        <div class = "signUp">
-                <h1>Sign Up Today</h1>
+        <div className = "signup">
                 <form onSubmit={handleSave}>
-                <div class = "usernameContainer">
-                    <input name="emailEntry" type="email" placeholder="Email"  ref={usernameRef} />
-                </div>
-                <div class = "passwordContainer">
-                    <input name="passwordEntry" type="password" placeholder="Password" ref={passwordRef} />
-                </div>
-                <div class = "passwordConfirmContainer">
-                    <input name="passwordEntry" type="password" placeholder="Confirm Password" ref={passwordConfirmRef} />
-                </div>
-                <div class = "sign">
-                    <button class = "signUpButton" >Sign Up</button>
-                </div>
-            </form>
+                    <label htmlFor="chk" aria-hidden="true">Sign up</label>
+                    <input name="emailEntry" type="email" placeholder="Email"  ref={usernameRef} required=""></input>
+					<input name="passwordEntry" type="password" placeholder="Password" ref={passwordRef} required=""></input>
+					<input name="passwordEntry" type="password" placeholder="Confirm Password" ref={passwordConfirmRef} required=""></input>
+                    <button>Sign Up</button>
+                </form>
         </div>
-        <div class="login">
-            <button class = "loginButton">Already Have An Account?</button>
-        </div>    
+        <div className="login">
+            <form>
+                <label htmlFor="chk" aria-hidden="true">Login</label>
+                <input name="emailEntry" type="email" placeholder="Email"  ref={usernameRef} required=""></input>
+				<input name="passwordEntry" type="password" placeholder="Password" ref={passwordRef} required=""></input>
+				<button>Login</button>
+            </form>
+		</div>  
     </div>
     )
 }
