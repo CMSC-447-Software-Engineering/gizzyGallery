@@ -1,81 +1,79 @@
-@font-face{
-	font-family: 'Mona';
-	src: local('Mona'), url('../fonts/MonaSans.ttf') format('truetype')
-}
-body {
-    margin: 0;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Mona', sans-serif;
-
-    background-color: #2e2733;
-    padding: 0;
-    margin: 0;
-}
-.signUp{
-    width: 376px;
-    height: 270px;
-    background-color: #cdbedf;
-    border-radius: 1rem;
-    text-align: center;
-    font-family: 'Mona', sans-serif;
-    padding: 10px;
+body{
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	font-family: 'Jost', sans-serif;
+	background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
 }
 .container{
-    width: 396px;
-    height: 360px;
-    align-items: center;
-    justify-content: center;
-    background-color: #cdbedf;
-    border-radius: 1rem;
-    text-align: center;
-    font-family: 'Mona', sans-serif;
+	width: 350px;
+	height: 500px;
+	overflow: hidden;
+	border-radius: 10px;
+	box-shadow: 5px 20px 50px #000;
 }
-.usernameContainer{
-    padding:10px;
-    border-radius: 2rem;
-    text-align: center;
-    font-family: 'Mona', sans-serif;
+#chk{
+	display: none;
 }
-.passwordContainer{
-    border-radius: 2rem;
-    text-align: center;
-    vertical-align: middle;
-    font-family: 'Mona', sans-serif;
+.signup{
+	position: relative;
+	width:100%;
+	height: 100%;
 }
-.passwordConfirmContainer{
-    padding:10px;
-    border-radius: 2rem;
-    text-align: center;
-    vertical-align: middle;
-    font-family: 'Mona', sans-serif;
+label{
+	color: #fff;
+	font-size: 2.3em;
+	justify-content: center;
+	display: flex;
+	margin: 60px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: .5s ease-in-out;
+}
+input{
+	width: 60%;
+	height: 20px;
+	background: #e0dede;
+	justify-content: center;
+	display: flex;
+	margin: 20px auto;
+	padding: 10px;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+}
+button{
+    width: 60%;
+	height: 40px;
+	margin: 10px auto;
+	justify-content: center;
+	display: block;
+	color: #fff;
+	background: #573b8a;
+	font-size: 1em;
+	font-weight: bold;
+	margin-top: 20px;
+	outline: none;
+	border: none;
+	border-radius: 5px;
+	transition: .2s ease-in;
+	cursor: pointer;
+}
+button:hover{
+	background: #6d44b8;
+}
+.login{
+	height: 460px;
+	background: #eee;
+	border-radius: 60% / 10%;
+	transform: translateY(-180px);
+	transition: .8s ease-in-out;
 }
 
-.sign{
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-    font-family: 'Mona', sans-serif;
-}
-.signUpButton{
-    -webkit-text-fill-color: #f7e8ff;
-    background-color: #453750;
-    width: 200px;
-    border-radius: 1rem;
-    padding: 10px;
-    font-family: 'Mona', sans-serif;
-}
-.loginButton{
-    -webkit-text-fill-color: #f7e8ff;
-    justify-content: center;
-    background-color: #453750;
-    border-radius: 1rem;
-    text-align: center;
-    align-items: center;
-    margin-top: 2px;
-    padding: 10px;
-    font-family: 'Mona', sans-serif;
+.login label{
+	color: #573b8a;
+	transform: scale(.6);
 }
