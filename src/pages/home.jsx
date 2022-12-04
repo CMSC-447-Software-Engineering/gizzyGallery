@@ -62,6 +62,5 @@ export default function Home(){
             <button class = "loginButton">Already Have An Account?</button>
         </div>    
     </div>
-
     )
 }
