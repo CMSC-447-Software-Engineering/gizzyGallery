@@ -42,18 +42,16 @@ export default function Home(){
         <div className = "signup">
                 <form onSubmit={handleSave}>
                     <label htmlFor="chk" aria-hidden="true">Sign up</label>
-                    <input name="emailEntry" type="email" placeholder="Email"  ref={usernameRef} required=""></input>
-					<input name="passwordEntry" type="password" placeholder="Password" ref={passwordRef} required=""></input>
-					<input name="passwordEntry" type="password" placeholder="Confirm Password" ref={passwordConfirmRef} required=""></input>
+                    <input name="emailEntry" type="email" placeholder="Email"  ref={usernameRef} ></input>
+					<input name="passwordEntry" type="password" placeholder="Password" ref={passwordRef}></input>
+					<input name="passwordEntry" type="password" placeholder="Confirm Password" ref={passwordConfirmRef}></input>
                     <button>Sign Up</button>
                 </form>
         </div>
         <div className="login">
             <form>
                 <label htmlFor="chk" aria-hidden="true">Login</label>
-                <input name="emailEntry" type="email" placeholder="Email"  ref={usernameRef} required=""></input>
-		<input name="passwordEntry" type="password" placeholder="Password" ref={passwordRef} required=""></input>
-		<button>Login</button>
+		        <button>Login</button>
             </form>
 	</div>  
     </div>
