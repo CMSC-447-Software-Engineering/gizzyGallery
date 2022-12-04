@@ -52,10 +52,10 @@ export default function Home(){
             <form>
                 <label htmlFor="chk" aria-hidden="true">Login</label>
                 <input name="emailEntry" type="email" placeholder="Email"  ref={usernameRef} required=""></input>
-				<input name="passwordEntry" type="password" placeholder="Password" ref={passwordRef} required=""></input>
-				<button>Login</button>
+		<input name="passwordEntry" type="password" placeholder="Password" ref={passwordRef} required=""></input>
+		<button>Login</button>
             </form>
-		</div>  
+	</div>  
     </div>
     )
 }
