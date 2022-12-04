@@ -1,22 +1,26 @@
+@font-face{
+	font-family: 'Mona';
+	src: local('Mona'), url('../fonts/MonaSans.ttf') format('truetype')
+}
 body {
     margin: 0;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Bebas Neue', cursive;
+    font-family: 'Mona', sans-serif;
 
-    background-color: grey;
+    background-color: #2e2733;
     padding: 0;
     margin: 0;
 }
 .signUp{
     width: 376px;
     height: 270px;
-    background-color: #f7e8ff;
+    background-color: #cdbedf;
     border-radius: 1rem;
     text-align: center;
-
+    font-family: 'Mona', sans-serif;
     padding: 10px;
 }
 .container{
@@ -24,26 +28,29 @@ body {
     height: 360px;
     align-items: center;
     justify-content: center;
-    background-color: #e0affa;
+    background-color: #cdbedf;
     border-radius: 1rem;
     text-align: center;
+    font-family: 'Mona', sans-serif;
 }
 .usernameContainer{
     padding:10px;
     border-radius: 2rem;
     text-align: center;
+    font-family: 'Mona', sans-serif;
 }
 .passwordContainer{
     border-radius: 2rem;
     text-align: center;
     vertical-align: middle;
-
+    font-family: 'Mona', sans-serif;
 }
 .passwordConfirmContainer{
     padding:10px;
     border-radius: 2rem;
     text-align: center;
     vertical-align: middle;
+    font-family: 'Mona', sans-serif;
 }
 
 .sign{
@@ -51,22 +58,24 @@ body {
     align-items: center;
     text-align: center;
     padding: 20px;
+    font-family: 'Mona', sans-serif;
 }
 .signUpButton{
     -webkit-text-fill-color: #f7e8ff;
-    background-color: #5a0b85;
+    background-color: #453750;
     width: 200px;
     border-radius: 1rem;
     padding: 10px;
+    font-family: 'Mona', sans-serif;
 }
-
 .loginButton{
     -webkit-text-fill-color: #f7e8ff;
     justify-content: center;
-    background-color:  #5a0b85;
+    background-color: #453750;
     border-radius: 1rem;
     text-align: center;
     align-items: center;
-    margin-top: 10px;
+    margin-top: 2px;
     padding: 10px;
+    font-family: 'Mona', sans-serif;
 }
