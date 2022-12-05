@@ -73,24 +73,26 @@ export default function Home(){
     }
     return (
     
-    <div className = "container" >
-        <div className = "signup">
+        <>
+        
+        <div className="container">
+            <div className="signup">
                 <form onSubmit={handleSave}>
-                    <label onClick = {handleClickSignUp} className = 'signupLabel' aria-hidden="true" style = {signingUp ? upChecked : upNotChecked}>Sign Up</label>
-                    <input name="emailEntry" type="email" placeholder="Email"  ref={usernameRef} ></input>
-					<input name="passwordEntry" type="password" placeholder="Password" ref={passwordRef}></input>
-					<input name="passwordEntry" type="password" placeholder="Confirm Password" ref={passwordConfirmRef}></input>
+                    <label onClick={handleClickSignUp} className='signupLabel' aria-hidden="true" style={signingUp ? upChecked : upNotChecked}>Sign Up</label>
+                    <input name="emailEntry" type="email" placeholder="Email" ref={usernameRef}></input>
+                    <input name="passwordEntry" type="password" placeholder="Password" ref={passwordRef}></input>
+                    <input name="passwordEntry" type="password" placeholder="Confirm Password" ref={passwordConfirmRef}></input>
                     <button>Sign Up</button>
                 </form>
-        </div>
-        <div className="login" style = {signingIn ? loginMain : signupMain}>
-            <form>
-                <label onClick = {handleClickSignIn} className='loginLabel' aria-hidden="true" style = {signingIn? inChecked : inNotChecked}>Login</label>
-                <input name="emailEntry" type="email" placeholder="Email"  ></input>
-					<input name="passwordEntry" type="password" placeholder="Password" ></input>
-                <button>Login</button>
-            </form>
-	    </div>  
-    </div>
+            </div>
+            <div className="login" style={signingIn ? loginMain : signupMain}>
+                <form>
+                    <label onClick={handleClickSignIn} className='loginLabel' aria-hidden="true" style={signingIn ? inChecked : inNotChecked}>Login</label>
+                    <input name="emailEntry" type="email" placeholder="Email"></input>
+                    <input name="passwordEntry" type="password" placeholder="Password"></input>
+                    <button>Log In</button>
+                </form>
+            </div>
+        </div></>
     )
 }
