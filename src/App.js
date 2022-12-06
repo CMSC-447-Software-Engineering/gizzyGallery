@@ -1,21 +1,23 @@
-import React, { useState } from 'react';
-import Title from './comps/Title';
-import UploadForm from './comps/UploadForm';
-import ImageGrid from './comps/ImageGrid';
-import Modal from './comps/Modal';
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import SignUp from './pages/home';
+import Gizzy from './pages/gizzyGal';
+import ResetPassword from './pages/resetPassword';
+import { AuthContextProvider } from './context/AuthContext';
+
 
 function App() {
-  const [selectedImg, setSelectedImg] = useState(null);
-
   return (
-    <div className="App">
-      <Title/>
-      <UploadForm />
-      <ImageGrid setSelectedImg={setSelectedImg} />
-      { selectedImg && (
-        <Modal selectedImg={selectedImg} setSelectedImg={setSelectedImg} />
-      )}
-    </div>
+    <AuthContextProvider>
+        <Routes>
+          <Route path='/' element={<SignUp />} />
+          <Route path='/gizzyGal' element={<Gizzy />} />
+          <Route path='/passwordRecovery' element={<ResetPassword />} />
+      </Routes>  
+    </AuthContextProvider>
+      
+     
+    
   );
 }
 
