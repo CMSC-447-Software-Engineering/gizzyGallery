@@ -27,9 +27,10 @@ export default function GizzyGal(){
         <h2>Pictures</h2>
 		<div className="img-grid">
 			{docs && docs.map(doc => (
-				<img src={doc.url} width="256" height="256" />
+				<motion.div className="img-wrap" key={doc.id} layout whileHover={{opacity : 1}}>
+				<motion.img src={doc.url} alt="uploaded pic" initial={{opacity : 0}} animate={{opacity : 1}} transistion={{delay : 1}}/>
+				</motion.div>
 			))}
-			
 		</div>
       </div>
       <div className = "column right" >
