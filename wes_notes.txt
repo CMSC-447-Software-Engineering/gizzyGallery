@@ -1,0 +1,10 @@
+Dependencies:
+	exif-js (install with `npm i exif-js`)
+Monochromic Color Palette:
+	Light -> Dark and Top -> Bottom
+	#cdbedf
+	#a393bf
+	#9882ac
+	#73648a
+	#453750
+	#2e2733
