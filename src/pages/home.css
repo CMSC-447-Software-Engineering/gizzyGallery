@@ -8,6 +8,7 @@ body{
 	font-family: 'Jost', sans-serif;
 	background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
 }
+
 .container{
 	width: 350px;
 	height: 500px;
@@ -69,8 +70,16 @@ button:hover{
 	border-radius: 60% / 10%;
 
 }
-
 .loginLabel{
 	color: #573b8a;
 	transform: scale(.6);
+}
+.forgotPass{
+
+	margin: 0;
+    position: absolute;
+    top: 63%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
 }

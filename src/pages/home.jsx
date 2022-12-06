@@ -1,15 +1,19 @@
 import * as React from 'react';
-import {firestore} from "../firebase"
-import {addDoc, collection} from "firebase/firestore"
+import { Link, useNavigate } from 'react-router-dom';
+import { UserAuth } from '../context/AuthContext';
 import './home.css';
 
 export default function Home(){
-    const usernameRef = React.useRef();
-    const passwordRef = React.useRef();
-    const passwordConfirmRef = React.useRef();
-    const ref = collection(firestore, "messages");
+    const [email, setEmail] = React.useState('');
+    const [password, setPassword] = React.useState('');
+    const [confirmPassword, setConfirmPassword] = React.useState('');
+    const navigate = useNavigate()
+
+
     const [signingUp, setSigningUp] = React.useState(true);
     const [signingIn, setSigningIn] = React.useState(false);
+
+    const { createUser } = UserAuth();
 
     const upChecked = {
         transform: 'scale(1)'
@@ -34,41 +38,33 @@ export default function Home(){
     }
 
     const handleClickSignUp = () => {
-        console.log("clicked sign up", !signingUp);
         setSigningUp(!signingUp);
         setSigningIn(!signingIn);
     }
 
     const handleClickSignIn = () => {
-        console.log("clicked sign in ", !signingIn);
         setSigningIn(!signingIn);
         setSigningUp(!signingUp);
     }
 
+    
     const handleSave = async(e) =>{
         e.preventDefault();
-        console.log(usernameRef.current.value);
-        console.log(passwordRef.current.value);
 
-        if (passwordRef.current.value === '' || usernameRef.current.value === '' || passwordConfirmRef.current.value === ''){
+        if(confirmPassword === '' || password === '' || email === ''){
             alert("Please complete all parts of the form");
             return;
         }
-        if (passwordRef.current.value !== passwordConfirmRef.current.value) {
+        if(password != confirmPassword){
             alert("Password did not match");
             return;
-          }
-
-        let user = {
-            password: passwordRef.current.value,
-            username:usernameRef.current.value, 
         }
-        
 
         try{
-            addDoc(ref, user);
+            await createUser(email, password);
+            navigate('/gizzyGal')
         }catch (e){
-            console.log(e);
+            console.log(e.message);
         }
     }
     return (
@@ -79,9 +75,9 @@ export default function Home(){
             <div className="signup">
                 <form onSubmit={handleSave}>
                     <label onClick={handleClickSignUp} className='signupLabel' aria-hidden="true" style={signingUp ? upChecked : upNotChecked}>Sign Up</label>
-                    <input name="emailEntry" type="email" placeholder="Email" ref={usernameRef}></input>
-                    <input name="passwordEntry" type="password" placeholder="Password" ref={passwordRef}></input>
-                    <input name="passwordEntry" type="password" placeholder="Confirm Password" ref={passwordConfirmRef}></input>
+                    <input onChange={(e) => setEmail(e.target.value)} name="emailEntry" type="email" placeholder="Email"></input>
+                    <input onChange={(e) => setPassword(e.target.value)} name="passwordEntry" type="password" placeholder="Password"></input>
+                    <input onChange={(e) => setConfirmPassword(e.target.value)} name="passwordEntry" type="password" placeholder="Confirm Password"></input>
                     <button>Sign Up</button>
                 </form>
             </div>
@@ -91,6 +87,9 @@ export default function Home(){
                     <input name="emailEntry" type="email" placeholder="Email"></input>
                     <input name="passwordEntry" type="password" placeholder="Password"></input>
                     <button>Log In</button>
+                    <p className = "forgotPass">
+                        <Link to='/passwordRecovery'>Forgot Password? </Link>
+                    </p>
                 </form>
             </div>
         </div></>
