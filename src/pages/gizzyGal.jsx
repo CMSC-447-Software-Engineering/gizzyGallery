@@ -12,8 +12,8 @@ export default function GizzyGal(){
     <>
     <div className = "gizzyHeader">
       <h1>Gizzy Gallery</h1>
-      <button onClick={goToAccount} className="resetButton"><span>&#171;</span> Go To Account</button>
     </div>
+    {/* <button onClick={goToAccount} className="resetButton"><span>&#171;</span> Go To Account</button> */}
     <div class="row">
       <div className="column left" >
         <h2>Albums:</h2>

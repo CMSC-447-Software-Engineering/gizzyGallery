@@ -67,17 +67,22 @@ export default function Home(){
             navigate('/gizzyGal')
         }catch (e){
             setError(e.message);
+        }
+        if(error){
             alert(error);
         }
     }
     const handleLog = async(e) =>{ 
         e.preventDefault();
+        setError('');
         try{
             await signIn(email, password);
             navigate('/gizzyGal')
         }catch (e){
             setError(e.message);
-            console.log(e.message);
+        }
+        if(error){
+            alert(error);
         }
     }
     return (
