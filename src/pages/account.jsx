@@ -15,14 +15,23 @@ const Account = () => {
       console.log(e.message);
     }
   };
-
+  const handleLGoToGizzy = async () => {
+    try {
+      navigate('/gizzyGal');
+    } catch (e) {
+      console.log(e.message);
+    }
+  };
   return (
-    <div className='max-w-[600px] mx-auto my-16 p-4'>
-      <h1 className='text-2xl font-bold py-4'>Account</h1>
+    <div className='container'>
+      <h1 className='accountEmail'> {user && user.email}</h1>
       <p>User Email: {user && user.email}</p>
 
-      <button onClick={handleLogout} className='border px-6 py-2 my-4'>
+      <button onClick={handleLogout} className=''>
         Logout
+      </button>
+      <button onClick={handleLGoToGizzy} className=''>
+        Go To Gallery
       </button>
     </div>
   );

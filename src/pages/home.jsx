@@ -7,7 +7,6 @@ export default function Home(){
     const [email, setEmail] = React.useState('');
     const [password, setPassword] = React.useState('');
     const [confirmPassword, setConfirmPassword] = React.useState('');
-    const [error, setError] = React.useState('')
     const navigate = useNavigate()
 
 
@@ -52,7 +51,6 @@ export default function Home(){
     
     const handleSave = async(e) =>{
         e.preventDefault();
-        setError('');
         if(confirmPassword === '' || password === '' || email === ''){
             alert("Please complete all parts of the form");
             return;
@@ -66,24 +64,19 @@ export default function Home(){
             await createUser(email, password);
             navigate('/gizzyGal')
         }catch (e){
-            setError(e.message);
+            alert(e.message);
         }
-        if(error){
-            alert(error);
-        }
+        
     }
     const handleLog = async(e) =>{ 
         e.preventDefault();
-        setError('');
         try{
             await signIn(email, password);
             navigate('/gizzyGal')
         }catch (e){
-            setError(e.message);
+            alert(e.message);
         }
-        if(error){
-            alert(error);
-        }
+        
     }
     return (
     

@@ -2,7 +2,7 @@
     position: fixed;
     align-content: space-between;
     top: 3%;
-    left:40%;
+    left:35%;
     color: white;
     font-size: 32px;
 }
@@ -21,7 +21,7 @@
     float: left;
     padding: 10px;
     overflow: hidden;
-    height: 80%; /* Should be removed. Only for demonstration */
+    height: 100%; 
 }
 
 .left{
@@ -49,4 +49,18 @@
     content: "";
     display: table;
     clear: both;
+}
+.userAccount{
+    color: white;
+    position: fixed;
+    width: 50px;
+    top: 3%;
+    left:3%;
+}
+.accountEmail{
+    position: relative;
+    color: white;
+    padding: 10px;
+    top: 3%;
+    left: 12%;
 }
