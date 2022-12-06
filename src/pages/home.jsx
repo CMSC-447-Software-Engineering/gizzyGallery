@@ -57,7 +57,7 @@ export default function Home(){
             alert("Please complete all parts of the form");
             return;
         }
-        if(password != confirmPassword){
+        if(password !== confirmPassword){
             alert("Password did not match");
             return;
         }
@@ -67,7 +67,7 @@ export default function Home(){
             navigate('/gizzyGal')
         }catch (e){
             setError(e.message);
-            console.log(e.message);
+            alert(error);
         }
     }
     const handleLog = async(e) =>{ 

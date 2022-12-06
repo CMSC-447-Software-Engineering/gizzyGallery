@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+}
+.gizzyHeader{
+    position: fixed;
+    align-content: space-between;
+    top: 3%;
+    left:42%;
+}
+.row{
+    box-sizing: border-box;
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+    left:0;
+    top: 200px;
+    position: fixed;
+}
+/* Create three unequal columns that floats next to each other */
+.column {
+    float: left;
+    padding: 10px;
+    overflow: hidden;
+    height: 80%; /* Should be removed. Only for demonstration */
+}
+
+.left{
+    background-color: rgba(255,255,255,0.13);
+    backdrop-filter: blur(10px);
+    border-radius: 3em 0em 0em 3em;
+    width: 15%;
+}
+
+.right {
+    background-color: rgba(255,255,255,0.13);
+    backdrop-filter: blur(10px);
+    border-radius: 0em 3em 3em 0em;
+    width: 20%;
+    }
+
+.middle {
+    background-color: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+    width: 65%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
