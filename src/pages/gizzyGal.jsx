@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {} from 'react'
 import { useNavigate } from 'react-router-dom';
 import './gizzyGal.css';
 
@@ -36,8 +36,12 @@ export default function GizzyGal(){
 		</div>
       </div>
       <div className = "column right" >
-        <h2>Sorting:</h2>
-        <p>Some text..</p>
+        <div className = "sortingFunc">
+          <h2>Sorting:</h2>
+        </div>
+        <div className = "sharingFunc">
+          <h1>Share</h1>
+        </div>
       </div>
   </div>
   </>
