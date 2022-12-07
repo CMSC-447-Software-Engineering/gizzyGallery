@@ -5,6 +5,8 @@ import './gizzyGal.css';
 import useFirestore from '../hooks/useFirestore';
 import { motion } from 'framer-motion';
 
+var selectedImg = null;
+
 export default function GizzyGal(){
   const { docs } = useFirestore('images');
   const navigate = useNavigate()
@@ -27,7 +29,7 @@ export default function GizzyGal(){
         <h2>Pictures</h2>
 		<div className="img-grid">
 			{docs && docs.map(doc => (
-				<motion.div className="img-wrap" key={doc.id} layout whileHover={{opacity : 1}}>
+				<motion.div className="img-wrap" key={doc.id} layout whileHover={{opacity : 1}} onClick={() => {selectedImg = doc.url;}}>
 				<motion.img src={doc.url} alt="uploaded pic" initial={{opacity : 0}} animate={{opacity : 1}} transistion={{delay : 1}}/>
 				</motion.div>
 			))}
@@ -40,4 +42,8 @@ export default function GizzyGal(){
   </div>
   </>
   )
+		// <motion.div className="backdrop" onClick={(e) => {if e.target.classList.contains('backdrop'){selectedImg = null}}} initial={{opacity : 1}} animate={{opacity : 1}}
+		// >
+		// </motion.div>
+			// <motion.img src={selectedImg} initial={{y : "-100vh"}} animate={{y : 0}}/>
 }
