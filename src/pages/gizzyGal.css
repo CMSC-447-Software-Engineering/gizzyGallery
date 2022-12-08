@@ -1,10 +1,10 @@
 .gizzyHeader{
     position: fixed;
-    align-content: space-between;
+	align-content: center;
     top: 3%;
     left:35%;
     color: white;
-    font-size: 32px;
+    font-size: 64px;
 }
 .row{
     box-sizing: border-box;
@@ -12,7 +12,7 @@
     height: 100%;
     width: 100%;
     left:0;
-    top: 200px;
+    top: 15%;
     position: fixed;
 }
 /* Create three unequal columns that floats next to each other */
@@ -21,7 +21,7 @@
     float: left;
     padding: 10px;
     overflow-y: scroll;
-    height: 75%; 
+    height: 85%; 
 }
 
 .left{

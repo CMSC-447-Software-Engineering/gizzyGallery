@@ -21,7 +21,7 @@ export default function GizzyGal(){
   return (
     <>
     <div className = "gizzyHeader">
-      <h1>Gizzy Gallery</h1>
+      Gizzy Gallery
     </div>
     <button onClick={goToAccount} className="userAccount"><span>&#171;</span> Go To Account</button>
     <div class="row">
