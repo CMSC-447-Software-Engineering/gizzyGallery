@@ -23,7 +23,7 @@ const Account = () => {
     }
   };
   return (
-    <div className='container'>
+    <div className='container account'>
       <h1 className='accountEmail'> {user && user.email}</h1>
 
       <button onClick={handleLogout} className=''>
