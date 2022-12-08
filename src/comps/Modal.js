@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const Modal = ({ setSelectedImg, selectedImg, docs }) => {
 	const handle_keydown = (e) => {
-		if(selectedImg){
+		if(selectedImg && (e.key === "ArrowLeft" || e.key === "ArrowRight")){
 			let index = -1;
 			for(let i = 0; i < docs.length; i++){
 				if(docs[i].url){
@@ -15,7 +15,7 @@ const Modal = ({ setSelectedImg, selectedImg, docs }) => {
 			if(index !== -1){
 				let change_amt = 0;
 				if(e.key === "ArrowLeft"){
-					change_amt = docs.length - 1;
+					change_amt = -1;
 				}
 				else if(e.key === "ArrowRight"){
 					change_amt = 1;
