@@ -28,7 +28,6 @@ export default function GizzyGal(){
       <div className="column left" >
         <h2>Albums:</h2>
         <button>Create Album</button>
-        <p>Albums go here</p>
       </div>
       <div className="column middle">
         <h2>Pictures</h2>
