@@ -50,6 +50,8 @@ const Modal = ({ setSelectedImg, selectedImg, docs }) => {
 				animate={{ y: 0 }}
 			/>
 			</motion.div>
+			
+          
 		</div>
 	);
 }

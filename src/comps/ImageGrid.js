@@ -1,9 +1,11 @@
 import React from 'react';
 import useFirestore from '../hooks/useFirestore';
 import { motion } from 'framer-motion';
+import { projectFirestore } from '../firebase/config';
 
 const ImageGrid = ({ setSelectedImg }) => {
   const { docs } = useFirestore('images');
+  const db = projectFirestore.collection('images');
 
   return (
     <div className="img-grid">
@@ -18,7 +20,12 @@ const ImageGrid = ({ setSelectedImg }) => {
             animate={{ opacity: 1 }}
             transition={{ delay: 1 }}
           />
+          <button type="button" class="layer" onClick={() => db.doc(doc.id).delete()}>
+            X
+          </button>
+          
         </motion.div>
+        
       ))}
     </div>
   )
