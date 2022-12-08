@@ -5,6 +5,17 @@
     left:35%;
     color: white;
     font-size: 64px;
+    font-weight: bold;
+}
+h2{
+	display: block;
+    font-size: 24px;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    color: white;
 }
 .row{
     box-sizing: border-box;
@@ -27,14 +38,14 @@
 .left{
     background-color: rgba(255,255,255,0.13);
     backdrop-filter: blur(10px);
-    border-radius: 3em 0em 0em 3em;
+    border-radius: 1em 0em 0em 0em;
     width: 15%;
 }
 
 .right {
     background-color: rgba(255,255,255,0.13);
     backdrop-filter: blur(10px);
-    border-radius: 0em 3em 3em 0em;
+    border-radius: 0em 1em 0em 0em;
     width: 20%;
     overflow:hidden;
     }
