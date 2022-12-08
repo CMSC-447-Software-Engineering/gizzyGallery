@@ -27,6 +27,7 @@ export default function GizzyGal(){
     <div className="row">
       <div className="column left" >
         <h2>Albums:</h2>
+        <button>Create Album</button>
         <p>Albums go here</p>
       </div>
       <div className="column middle">
@@ -37,6 +38,7 @@ export default function GizzyGal(){
       <div className = "column right" >
         <div className = "sortingFunc">
           <h2>Sorting:</h2>
+          <button>Sorting Date Added</button>
         </div>
         <div className = "sharingFunc">
           <h1>Share</h1>
