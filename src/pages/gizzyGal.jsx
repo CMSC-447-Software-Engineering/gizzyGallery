@@ -43,7 +43,7 @@ export default function GizzyGal(){
         </div>
       </div>
         { selectedImg && (
-          <Modal selectedImg={selectedImg} setSelectedImg={setSelectedImg} />
+          <Modal selectedImg={selectedImg} setSelectedImg={setSelectedImg} docs={docs}/>
         )}
   </div>
   </>
