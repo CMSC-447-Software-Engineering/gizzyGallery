@@ -25,7 +25,6 @@ const Account = () => {
   return (
     <div className='container'>
       <h1 className='accountEmail'> {user && user.email}</h1>
-      <p>User Email: {user && user.email}</p>
 
       <button onClick={handleLogout} className=''>
         Logout
