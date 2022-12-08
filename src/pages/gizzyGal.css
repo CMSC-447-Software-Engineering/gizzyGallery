@@ -20,8 +20,8 @@
     box-sizing: border-box;
     float: left;
     padding: 10px;
-    overflow: auto;
-    height: 100%; 
+    overflow-y: scroll;
+    height: 75%; 
 }
 
 .left{
