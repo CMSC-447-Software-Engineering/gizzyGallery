@@ -20,10 +20,9 @@ const UploadForm = () => {
   };
 
   return (
-    <form>
+    <form className="upload_form">
       <label>
-        <input type="file" onChange={handleChange} />
-        <span>+</span>
+        <input className="upload_input" placeholder="Upload Image..." type="file" onChange={handleChange} />
       </label>
       <div className="output">
         { error && <div className="error">{ error }</div>}

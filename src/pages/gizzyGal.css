@@ -16,6 +16,7 @@ h2{
     margin-inline-end: 0px;
     font-weight: bold;
     color: white;
+	height: 2%;
 }
 .row{
     box-sizing: border-box;
@@ -128,4 +129,12 @@ h2{
 .sharingFunc{
 	background-color: green;
 	height: 50%;
+}
+label{
+	margin: 1%;
+}
+.upload_input{
+	margin: 2%;
+	align-content: center;
+	background: #9882ac;
 }
