@@ -24,7 +24,7 @@ export default function GizzyGal(){
       Gizzy Gallery
     </div>
     <button onClick={goToAccount} className="userAccount"><span>&#171;</span> Go To Account</button>
-    <div class="row">
+    <div className="row">
       <div className="column left" >
         <h2>Albums:</h2>
         <p>Albums go here</p>

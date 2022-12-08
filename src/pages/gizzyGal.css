@@ -96,7 +96,7 @@ h2{
   padding: 50% 0;
   /* padding controls height, will always be perfectly square regardless of width */
   position: relative;
-  opacity: 0.8;
+  opacity: 1.0;
 }
 .img-wrap img{
   min-width: 100%;
