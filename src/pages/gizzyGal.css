@@ -138,3 +138,7 @@ label{
 	align-content: center;
 	background: #9882ac;
 }
+.map_frame{
+	position : relative;
+	border-color: #9882ac;
+}

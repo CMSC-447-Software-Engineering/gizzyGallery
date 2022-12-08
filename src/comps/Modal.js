@@ -44,14 +44,14 @@ const Modal = ({ setSelectedImg, selectedImg, docs }) => {
 				initial={{ opacity: 0 }}
 				animate={{ opacity: 1 }}
 			>
+			<Bugger image_url={selectedImg} />
 			<motion.img src={selectedImg} alt="enlarged pic" 
 				initial={{ y: "-100vh" }}
 				animate={{ y: 0 }}
 			/>
 			</motion.div>
-			<Bugger image_url={selectedImg} />
 		</div>
-	)
+	);
 }
 
 export default Modal;
