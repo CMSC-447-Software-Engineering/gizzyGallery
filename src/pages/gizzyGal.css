@@ -66,9 +66,9 @@ h2{
 .userAccount{
     color: white;
     position: fixed;
-    width: 50px;
-    top: 3%;
-    left:3%;
+    width: 15%;
+    top: 2%;
+    left:2%;
 }
 .accountEmail{
     position: relative;
