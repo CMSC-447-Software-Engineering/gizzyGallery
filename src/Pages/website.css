@@ -1,0 +1,135 @@
+body{
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    
+	font-family: 'Jost', sans-serif;
+	background: linear-gradient(to top, #222222, #2e2e2e, #222222);
+}
+ /* Homepage  */
+.navBar{
+    justify-content: center;
+	align-items: center;
+    position: absolute;
+    display: flex;
+    background-color:rgb(68,68,68);
+    width: 100%;
+}
+.settingButton{
+    height: 38px;
+    width: 38px;
+    position: fixed;
+    left: 95%;
+    font-size: 24px;
+    cursor: pointer;
+    background-color: transparent;
+    color:white;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;    
+}
+.projectTitle{
+    color: white;
+	cursor: pointer;
+}
+
+/* Login Page */
+.container{
+	width: 350px;
+	height: 500px;
+    overflow: hidden;
+    position: absolute;
+	border-radius: 10px;
+	box-shadow: 5px 20px 50px #000;
+	background-color: #000000;
+}
+
+.signup{
+	position: relative;
+	width:100%;
+	height: 100%;
+}
+label{
+	color: #fff;
+	font-size: 2.3em;
+	justify-content: center;
+	display: flex;
+	margin: 60px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: .5s ease-in-out;
+}
+input{
+	width: 60%;
+	height: 20px;
+	background: #e0dede;
+	justify-content: center;
+	display: flex;
+	margin: 20px auto;
+	padding: 10px;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+}
+button{
+    width: 60%;
+	height: 40px;
+	margin: 10px auto;
+	justify-content: center;
+	display: block;
+	color: #000000;
+	background: #FFC20E;
+	font-size: 1em;
+	font-weight: bold;
+	margin-top: 20px;
+	outline: none;
+	border: none;
+	border-radius: 5px;
+	transition: .2s ease-in;
+	cursor: pointer;
+}
+button:hover{
+	background: #B18906;
+}
+.login{
+	height: 460px;
+	background: #eee;
+	border-radius: 60% / 10%;
+}
+.loginLabel{
+	color: #573b8a;
+	transform: scale(.6);
+}
+.forgotPass{
+	margin: 0;
+    position: absolute;
+    top: 63%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+.resetPassword{
+	border-radius: 90% / 10%;
+	position: relative;
+	top: 0%;
+    left: 10%;
+	justify-content: center;
+	align-items: cener;
+}
+.resetLabel{
+	color: white;
+	word-wrap: break-word
+}
+.resetContainer{
+	width: 350px;
+	height: 400px;
+	background-color: rgba(255,255,255,0.13);
+	border: 2px solid rgba(255,255,255,0.1);
+	overflow: hidden;
+	border-radius: 10px;
+	backdrop-filter: blur(10px);
+	box-shadow: 0 0 40px rgba(8,7,16,0.6);
+}
+.resetButton{
+	background: #302b63;
+}

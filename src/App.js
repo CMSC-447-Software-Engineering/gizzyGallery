@@ -1,39 +1,15 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import SignUp from './pages/home';
-import Gizzy from './pages/gizzyGal';
-import Account from './pages/account';
-import ResetPassword from './pages/resetPassword';
-import { AuthContextProvider } from './context/AuthContext';
-import ProtectedRoute from './context/ProtectedRoute';
+import HomePage from './Pages/homePage';
+import LoginPage from './Pages/loginPage';
 
-
-function App() {
+function WebApp() {
   return (
-    <AuthContextProvider>
-        <Routes>
-          <Route path='/' element={<SignUp />} />
-          <Route 
-          path='/gizzyGal' 
-          element={
-            <ProtectedRoute> 
-              <Gizzy /> 
-            </ProtectedRoute>
-          } 
-          />
-          <Route
-            path='/account'
-            element={
-              <ProtectedRoute>
-                <Account />
-              </ProtectedRoute>
-            }
-          />
-          <Route path='/passwordRecovery' element={<ResetPassword />} />
-      </Routes>  
-    </AuthContextProvider>
-          
+    <Routes>
+      <Route path='/' element={<LoginPage />} />
+      <Route path='/homepage' element={<HomePage />} />
+    </Routes>
   );
 }
 
-export default App;
+export default WebApp;
